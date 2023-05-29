@@ -404,3 +404,6 @@ crashlytics-build.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,latex,visualstudiocode
+
+# Security for heavy Unity project
+Tilogic
