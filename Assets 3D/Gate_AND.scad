@@ -17,13 +17,7 @@ module thore(thore_radius, tube_diameter, angle){
 //base();
 
 translate([5.5,10,3])
-minkowski(){
-    difference(){
-        cylinder(s, 7, 7);
-        translate([-20, -10, -1]) cube(20);
-    }
-    sphere(0.5);
+difference(){
+    cylinder(1, 7, 7);
+    translate([-20, -10, -1]) cube(20);
 }
-translate([0, 15, 3]) rotate([0, 90, 0]) cylinder(6, 0.5, 0.5);
-translate([0, 5, 3]) rotate([0, 90, 0]) cylinder(6, 0.5, 0.5);
-translate([11, 10, 3]) rotate([0, 90, 0]) cylinder(9, 0.5, 0.5);

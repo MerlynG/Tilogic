@@ -1,10 +1,15 @@
 $fn = 100;
 s = 0.0001;
 
-//minkowski(){
-//    translate([1,1,0]) cube([18, 18, 2]);
-//    cylinder(1,1,1);
-//}
+module base(){
+    minkowski(){
+        translate([1,1,0]) cube([18, 18, 2]);
+        cylinder(1,1,1);
+    }
+}
+
+//translate([0,0,-10]) color("red")
+//base();
 
 module thore(thore_radius, tube_diameter, angle){
     rotate_extrude(angle=angle) {
@@ -19,14 +24,15 @@ module thore(thore_radius, tube_diameter, angle){
 //translate([5.8, 4.6, 0]) rotate([-90, 0, -50]) cylinder(10, 0.5,0.5);
 //translate([13.482, 8.955, 0]) rotate([-90, 0, 50]) cylinder(10, 0.5,0.5);
 
-translate([0,0,3])
-minkowski(){
-    translate([8, 10, 0]) cylinder(s, 5, 5, $fn=3);
-    sphere(0.5);
+translate([0, 10, 2.5])
+union(){
+    translate([8, 0, 0]) cylinder(1, 6, 6, $fn=3);
+    translate([14.5, 0, 0])
+    difference(){
+            cylinder(1, 1.5, 1.5);
+            translate([0, 0, -0.5]) cylinder(2, 0.5, 0.5);
+    }
 }
-translate([0, 10, 3]) rotate([0, 90, 0]) cylinder(7, 0.5, 0.5);
-translate([16, 10, 3]) rotate([0, 90, 0]) cylinder(4, 0.5, 0.5);
-translate([14.5, 10, 3]) thore(2, 1, 360);
 //minkowski(){
 //    color("red") linear_extrude(0.000001) square(20);
 //    sphere(1);

@@ -19,12 +19,16 @@ module thore(thore_radius, tube_diameter, angle){
 translate([5.5,10,3])
 union(){
     difference(){
-        cylinder(1, 7, 7);
-        translate([-20, -10, -1]) cube(20);
-    }
-    translate([8,0,0])
-    difference(){
-        cylinder(1, 1.5, 1.5);
-        translate([0, 0, -0.5]) cylinder(2, 0.5, 0.5);
+        intersection(){
+            translate([0,-2,0]) cylinder(1, 7, 7);
+            translate([0,2,0]) cylinder(1, 7, 7);
+        }
+        difference(){
+            difference(){
+                translate([-7,0,-1]) cylinder(3, 7, 7);
+                translate([-7,0,-1]) cylinder(3, 6, 6);
+            }
+        }
+        translate([-7,0,-1]) cylinder(3, 5, 5);
     }
 }
