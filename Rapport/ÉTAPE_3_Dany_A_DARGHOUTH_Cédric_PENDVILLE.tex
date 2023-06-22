@@ -18,7 +18,7 @@
 }
 
 
-\title{Impressions 2D\\Rapport de la 2ème étape}
+\title{Serious Game\\Rapport de la 3ème étape}
 \author{}
 \date{}
 \addto\captionsenglish{\renewcommand*\contentsname{Sommaire}}
@@ -44,7 +44,7 @@
 		% \vfill creates an arbitrary amount of vertical white space as necessary to fill the page
 		\vfill
 		
-		Mai 2023
+		Juin 2023
 		
 		% \vspace*{3cm}
 		
@@ -56,10 +56,25 @@
 \newpage
 
 \section{Introduction}
-Ce rapport accompagne le rendu de la 3ème étape d
-\section{Règles du jeu}
+Ce rapport accompagne le rendu de la 3ème étape du projet de seious games dans le cadre du cours de Services et technologies multimédia.\\
+
+Le jeu développé s'appelle Tilogic est est un jeu de réflexion basé sur la logique booléenne. Le joueur doit résoudre des niveaux en utilisant des portes logiques. Le projet s'adresse à un public (jeune ou moins jeune) qui n'a ni expérience dans les jeux vidéo ni connaissance de la logque booléenne et se veut une introduction ludique à ce dernier domaine.\\
+
 \section{Gameplay}
+Étant une introduction à un domaine complexe, le jeu en lui-même ne pouvait pas proposer un gameplay trop compliqué et rester abordable pour un public non averti, le style puzzle/point and click s'est donc montré le plus pertinent.\\
+
+\section{Règles du jeu}
+Les règles du jeu sont simples, un niveau prend la forme d'un circuit logique à trous que le joueur doit compléter en utilisant les portes logiques mises à sa disposition de sorte à ce que toutes les lampes "output" soient allumées.\\
+
+Le score du joeur est calculé de la manière suivante: Chaque ensemble de niveau
+réussi (complété dans le temps imparti) rapporte 1 étoile, le meilleur score possible étant 5 étoiles.\\
+
+
 \section{But du jeu}
+Le but du jeu est de résoudre les niveaux proposés en utilisant les portes logiques mises à disposition, le plus vite possible afin d'obtenir le meilleur score.\\
+
+D'un point de vu plus général, le but du jeu est d'apprendre les bases de la logique booléenne de manière ludique et d'introduire ce domaine à un publique qui n'est pas forcémment familier avec les jeux vidéos ou la logique.\\
+
 \section{Adapatation de la difficulté}
 L'adapatation de la difficulté s'eefectue de la manière suivante: Le temps que le joueur met à résoudre un niveau est mesuré, et si le temps mis est en dessous d'un certain seuil, le joueur se vera proposé un niveau présentatn une nouvelle porte logique, dans le cas contraire, le jeu lui proposera un nouveau niveau n'incluant que la/les portes qu'il connait déjà. Cette différence influear également sur le score du joueur (le meilleur score étant obtenu en résolvant tous les niveaux "assez" rapidement).\\
 
@@ -76,6 +91,91 @@ L'adapatation de la difficulté s'eefectue de la manière suivante: Le temps que
     \subsection{Scripts}
 
 \section{Evaluation du jeu}
-    
+\textit{L'évaluation du je n'a malheuresement pas pût se faire par un autre groupe par manque de temps et de disponibilité. Elle a néanmoins été réalisée par différents personnes de l'entourage de l'équipen de développement couvrant mieux la catergory de personne aux quelles s'adresse le jeu mais égalemenet des étudiants du cui qui ont pût fournir un feedback plus technique.}\\
+	\subsection{Points forts}
+	\subsection{Points faibles}
+	\subsection{Améliorations possibles}
+
+\newpage
+\section{Annexe : Les niveaux}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NOT-1.jpg}
+    \caption{Premier Niveau de la porte NOT}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NOT-2.jpg}
+    \caption{2ème Niveau de la porte NOT}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NOT-3.jpg}
+    \caption{3ème Niveau de la porte NOT}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NOT-4.jpg}
+    \caption{4ème Niveau de la porte NOT}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NOT-5.jpg}
+    \caption{5ème Niveau de la porte NOT}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-AND-1.jpg}
+    \caption{Premier Niveau de la porte AND}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-AND-2.jpg}
+    \caption{2ème Niveau de la porte AND}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-AND-3.jpg}
+    \caption{3ème Niveau de la porte AND}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-AND-4.jpg}
+    \caption{4ème Niveau de la porte AND}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-OR-1.jpg}
+    \caption{Premier Niveau de la porte OR}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-OR-2.jpg}
+    \caption{2ème Niveau de la porte OR}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-OR-3.jpg}
+    \caption{3ème Niveau de la porte OR}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-XOR-1.jpg}
+    \caption{Premier Niveau de la porte XOR}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-XOR-2.jpg}
+    \caption{2ème Niveau de la porte XOR}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/Levels-NAND-2.jpg}
+    \caption{Niveau de la porte NAND (Niveau Final pour le cas où le joueur a réussi tous les niveaux précédents dans le temps impartit)}
+\end{figure}
+
 \end{document}
 \[\]
