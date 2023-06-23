@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 
 \newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\ib}[1]{\textbf{\textit{#1}}}
 \hypersetup{
 	colorlinks = true,
 	linkbordercolor = 1 1 1,
@@ -56,9 +57,9 @@
 \newpage
 
 \section{Introduction}
-Ce rapport accompagne le rendu de la 3ème étape du projet de seious games dans le cadre du cours de Services et technologies multimédia.\\
+Ce rapport accompagne le rendu de la 3ème étape du projet de serious games dans le cadre du cours de Services et technologies multimédia.\\
 
-Le jeu développé s'appelle Tilogic est est un jeu de réflexion basé sur la logique booléenne. Le joueur doit résoudre des niveaux en utilisant des portes logiques. Le projet s'adresse à un public (jeune ou moins jeune) qui n'a ni expérience dans les jeux vidéo ni connaissance de la logque booléenne et se veut une introduction ludique à ce dernier domaine.\\
+Le jeu développé s'appelle Tilogic est est un jeu de réflexion basé sur la logique booléenne. Le joueur doit résoudre des niveaux en utilisant des portes logiques. Le projet s'adresse à un public (jeune ou moins jeune) qui n'a ni expérience dans les jeux vidéo ni connaissance de la logique booléenne et se veut une introduction ludique à ce dernier domaine.\\
 
 \section{Gameplay}
 Étant une introduction à un domaine complexe, le jeu en lui-même ne pouvait pas proposer un gameplay trop compliqué et rester abordable pour un public non averti, le style puzzle/point and click s'est donc montré le plus pertinent.\\
@@ -87,14 +88,49 @@ L'adapatation de la difficulté s'eefectue de la manière suivante: Le temps que
 \section{Structure du jeu}
     \subsection{Scènes}
 
-    \subsection{GameObjects}    
+    Chaque scène de jeu est composée d'un board, de portes logiques et d'un script qui modifie l'état des cables en implémentant une vraie logique.
+
+    \subsection{GameObjects}
+    \noindent
+    Les GameObjects les plus importants sont les suivants
+    \begin{enumerate}
+        \item \ib{Gates} : les portes logiques, divisées en 2 catégories, 2 points et 3 points.
+        \item \ib{Emitter} : les lumière de gauche, fixes.
+        \item \ib{Goal} : les lumière de droite, qui s'adapte à l'état des cables.
+        \item \ib{Snapping point} : les endroits où les portes logiques peuvent se "fixer".
+    \end{enumerate}
+    
     \subsection{Scripts}
+    \noindent
+    Les scripts les plus importants sont les suivants
+    \begin{enumerate}
+        \item \ib{Scripts de niveau} : allume les cables en fonction des portes placées et valide le niveau s'il est réussi.
+        \item \ib{Draggable} : permet de déplacer les portes (et tout autre objet ayant un Box collider) et de les fixer sur les snapping points.
+        \item \ib{Chrono} : affiche le chronomètre et déclare un échec du niveau si le temps est écoulé.
+        \item \ib{Extract\_time} : script de debug permettant d'extraire le temps que mettent les utilisateurs à finir chaque niveau.
+    \end{enumerate}
 
 \section{Evaluation du jeu}
-\textit{L'évaluation du je n'a malheuresement pas pût se faire par un autre groupe par manque de temps et de disponibilité. Elle a néanmoins été réalisée par différents personnes de l'entourage de l'équipen de développement couvrant mieux la catergory de personne aux quelles s'adresse le jeu mais égalemenet des étudiants du cui qui ont pût fournir un feedback plus technique.}\\
+\textit{L'évaluation du jeu n'a pas été faite par un autre groupe, mais plutôt par des proches et certains camarades. Les tests ont été fait sur la version précédant la version finale, donc les points faibles ont été corrigés.}
 	\subsection{Points forts}
+    \begin{itemize}
+        \item Concept.
+        \item Simplicité de lecture.
+        \item Aspect ludique.
+    \end{itemize}
 	\subsection{Points faibles}
+    \begin{itemize}
+        \item Manque de clarté au niveau des portes logiques (manque de séparation des 2 types de portes).
+        \item Manque de clarté du but du jeu.
+    \end{itemize}
 	\subsection{Améliorations possibles}
+    \begin{itemize}
+        \item Plus de niveaux.
+        \item Des niveaux plus durs.
+        \item Des niveaux plus simples.
+        \item De la musique en jeu.
+        \item Un système de Leaderboard.
+    \end{itemize}
 
 \newpage
 \section{Annexe : Les niveaux}
